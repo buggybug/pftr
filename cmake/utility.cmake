@@ -1,0 +1,12 @@
+function(add_target_properties TARGET PROPERTY NEW_VALUES)
+    set(NEW_TARGET_PROPERTY_VALUES "${NEW_VALUES}")
+    get_target_property(CURRENT_TARGET_PROPERTY_VALUES ${TARGET} ${PROPERTY})
+    if(CURRENT_TARGET_PROPERTY_VALUES)
+        set(NEW_TARGET_PROPERTY_VALUES "${CURRENT_TARGET_PROPERTY_VALUES} ${NEW_VALUES}")
+    endif()
+    set_target_properties(${TARGET} PROPERTIES ${PROPERTY} ${NEW_TARGET_PROPERTY_VALUES})
+endfunction()
+
+function(add_target_link_flags TARGET NEW_VALUES)
+    add_target_properties(${TARGET} LINK_FLAGS ${NEW_VALUES})
+endfunction()
