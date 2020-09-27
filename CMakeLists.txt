@@ -30,6 +30,7 @@ endif()
 # Third party dependencies
 # Note: GLEW requires running automatic code generation before build
 add_subdirectory(glew/build/cmake)
+add_subdirectory(glfw)
 
 # Include CMake extensions
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
