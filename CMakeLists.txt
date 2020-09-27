@@ -27,6 +27,10 @@ if(WIN32)
     add_definitions(-DWINVER=0x0601 -D_WIN32_WINNT=0x0601)
 endif()
 
+# Third party dependencies
+# Note: GLEW requires running automatic code generation before build
+add_subdirectory(glew/build/cmake)
+
 # Include CMake extensions
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include("utility")
