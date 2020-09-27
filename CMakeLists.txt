@@ -29,7 +29,7 @@ endif()
 
 # Third party dependencies
 # Note: GLEW requires running automatic code generation before build
-add_subdirectory(glew/build/cmake)
+add_subdirectory(glew/build/cmake glew)
 add_subdirectory(glfw)
 
 # Include CMake extensions
