@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PFTR_CORE_APPLICATION_TARGET "pftr")
+set(PFTR_UTIL_LIBRARY_TARGET "pftr_util")
 
 if(WIN32)
     # Ensure that Windows code page independent prototypes are used,
