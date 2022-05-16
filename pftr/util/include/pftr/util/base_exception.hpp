@@ -28,9 +28,6 @@ namespace pftr
             BaseException(Status status, std::string &&description);
             BaseException(Status status, char const *description = nullptr);
 
-            BaseException(BaseException const&) = default;
-            BaseException &operator=(BaseException const &) = default;
-
         private:
             std::string const m_description;
             Status const m_status;

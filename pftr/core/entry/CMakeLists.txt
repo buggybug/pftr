@@ -19,6 +19,8 @@ if(WIN32)
 
     set(HEADERS ${HEADERS}
         src/windows/windows_application.hpp)
+
+    set(ADDITIONAL_EXECUTABLE_PROPERTIES WIN32)
 endif()
 
 if(UNIX)
@@ -29,13 +31,12 @@ if(UNIX)
         src/linux/linux_application.hpp)
 endif()
 
-add_executable(${TARGET} ${SOURCES} ${HEADERS})
+add_executable(${TARGET}
+    ${ADDITIONAL_EXECUTABLE_PROPERTIES}
+    ${SOURCES}
+    ${HEADERS})
 
 target_include_directories(${TARGET} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 target_link_libraries(${TARGET} ${LIBRARIES})
-
-if(WIN32)
-    add_target_link_flags(${TARGET} "/SUBSYSTEM:WINDOWS")
-endif()
