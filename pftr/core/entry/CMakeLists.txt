@@ -1,12 +1,13 @@
 set(TARGET ${PFTR_CORE_APPLICATION_TARGET})
 
 set(SOURCES
-    src/factories/application.cpp
+    src/application_statics.cpp
     src/base_application.cpp
     src/main.cpp)
 
 set(HEADERS
     src/interfaces/application.hpp
+    src/application_statics.hpp
     src/base_application.hpp)
 
 set(LIBRARIES

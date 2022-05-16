@@ -4,7 +4,8 @@ set(TARGET ${PFTR_UTIL_LIBRARY_TARGET})
 set(HEADERS
     include/pftr/util/interfaces/exception.hpp
     include/pftr/util/base_exception.hpp
-    include/pftr/util/state_machine.hpp)
+    include/pftr/util/state_machine.hpp
+    include/pftr/util/singleton.hpp)
 
 # Private headers
 set(HEADERS ${HEADERS})
